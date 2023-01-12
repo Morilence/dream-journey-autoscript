@@ -36,7 +36,7 @@ class Window:
             win32gui.SetWindowPos(
                 self.handle,
                 win32con.HWND_TOP,
-                rect['width'] // 12,
+                screenWidth // 2 - rect['width'] // 2,
                 screenHeight // 2 - rect['height'] // 2,
                 rect['width'],
                 rect['height'],

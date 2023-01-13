@@ -77,6 +77,5 @@ class Window:
                 'right,top': (screenWidth - rect['width'], 0),
                 'top': (rect['x'], 0)
             }
-            print(','.join(aligns))
             alignX, alignY = alignDict.get(','.join(aligns), (rect['x'], rect['y']))
             self.__setPos(alignX, alignY)

@@ -11,15 +11,15 @@ def main():
     with Listener(on_press=onPress) as listener:
         gm = Game('造梦西游online,4399造梦西游online专题,造梦西游online系列')
 
-        if not gm.isExist():
+        if not gm.window.isExist():
             print('[ 未找到游戏窗口 ]')
             return False
 
-        gm.show()
+        gm.window.show()
         time.sleep(1)
-        gm.setAlign('left,top')
+        gm.window.setAlign('left,top')
         time.sleep(1)
-        while listener.running and gm.isInForeground():
+        while listener.running and gm.window.isInForeground():
             time.sleep(1)
             print('# 检测中...')
             
@@ -38,7 +38,7 @@ def main():
                     gm.moveToAndClick(IMG['COMP_ARC_ITEM'])
                     print('> 选择目标存档')
         
-        if not gm.isInForeground():
+        if not gm.window.isInForeground():
             print('[ 游戏窗口被切至后台，脚本被迫结束 ]')
         elif not listener.running:
             print('[ 脚本结束 ]')        

@@ -1,7 +1,6 @@
 import time
-import threading
 from pynput.keyboard import Key, Listener
-from resource import IMG
+from resources import IMG
 from api import Game
 
 def onPress(key):

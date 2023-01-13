@@ -17,7 +17,7 @@ def main():
 
         gm.show()
         time.sleep(1)
-        gm.center()
+        gm.setAlign('left,top')
         time.sleep(1)
         while listener.running and gm.isInForeground():
             time.sleep(1)
